@@ -1,9 +1,9 @@
 {
-  "name": "raycast-download-manager",
-  "title": "Aria2 Download Manager",
+  "name": "aria-download-manager",
+  "title": "Aria Download Manager",
   "description": "Manage all your downloads from Raycast. Powered by aria2c — supports HTTP/HTTPS, FTP, BitTorrent, and Magnet links with multi-connection chunked downloading.",
   "version": "1.0.0",
-  "author": "pomdtr",
+  "author": "mvrck-dev",
   "icon": "icon.png",
   "categories": [
     "Productivity",
