@@ -1,13 +1,14 @@
 {
   "name": "meteor",
   "title": "Meteor",
-  "description": "Manage all your downloads from Raycast. Powered by aria2c — supports HTTP/HTTPS, FTP, BitTorrent, and Magnet links with multi-connection chunked downloading.",
+  "description": "High-speed download manager. Download files, torrents, and magnet links with multi-connection acceleration, powered by aria2c.",
   "version": "1.0.0",
   "author": "mvrck-dev",
   "icon": "icon.png",
   "categories": [
     "Productivity",
-    "Developer Tools"
+    "Developer Tools",
+    "Applications"
   ],
   "license": "MIT",
   "commands": [
