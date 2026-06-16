@@ -1,4 +1,4 @@
-# Aria2 Download Manager
+# Meteor
 
 A full-featured download manager for Raycast, powered by [aria2](https://aria2.github.io/) — the open-source lightweight multi-protocol download utility.
 
@@ -93,4 +93,4 @@ The extension can also connect to a remote aria2 daemon. Set the **Aria2 RPC Por
 
 ## Contributing
 
-Issues and PRs welcome at [github.com/mvrck-dev/raycast-download-manager](https://github.com/mvrck-dev/raycast-download-manager).
+Issues and PRs welcome at [github.com/mvrck-dev/meteor](https://github.com/mvrck-dev/meteor).

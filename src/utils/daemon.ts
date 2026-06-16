@@ -296,6 +296,12 @@ export async function startAria2Daemon(): Promise<void> {
     "--save-session-interval=10",
   ];
 
+  // Provide system CA certificate bundle to resolve macOS SSL/TLS handshake errors
+  const caCertPath = "/etc/ssl/cert.pem";
+  if (fs.existsSync(caCertPath)) {
+    args.push(`--ca-certificate=${caCertPath}`);
+  }
+
   if (preferences.checkCertificate === true) {
     args.push("--check-certificate=true");
   } else {

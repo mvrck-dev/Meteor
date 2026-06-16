@@ -15,7 +15,9 @@ type ExtensionPreferences = {
   /** Auto-Start Daemon - Automatically start a local background aria2c daemon if none is detected on the configured port. */
   "autoStartDaemon": boolean,
   /** Verify SSL Certificates - Verify HTTPS certificates. Disable if you encounter SSL/TLS handshake failures on some servers. */
-  "checkCertificate": boolean
+  "checkCertificate": boolean,
+  /** Automatic Updates - Enable automatic background updates for this extension from the Raycast Store. */
+  "autoUpdate": boolean
 }
 
 /** Preferences accessible in all the extension's commands */

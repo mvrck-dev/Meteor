@@ -1,6 +1,6 @@
 {
-  "name": "aria-download-manager",
-  "title": "Aria Download Manager",
+  "name": "meteor",
+  "title": "Meteor",
   "description": "Manage all your downloads from Raycast. Powered by aria2c — supports HTTP/HTTPS, FTP, BitTorrent, and Magnet links with multi-connection chunked downloading.",
   "version": "1.0.0",
   "author": "mvrck-dev",
@@ -74,6 +74,15 @@
       "description": "Verify HTTPS certificates. Disable if you encounter SSL/TLS handshake failures on some servers.",
       "default": false,
       "label": "Verify SSL/TLS certificates"
+    },
+    {
+      "name": "autoUpdate",
+      "type": "checkbox",
+      "required": false,
+      "title": "Automatic Updates",
+      "description": "Enable automatic background updates for this extension from the Raycast Store.",
+      "default": true,
+      "label": "Enable automatic updates"
     }
   ],
   "dependencies": {
