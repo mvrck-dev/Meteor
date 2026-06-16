@@ -1,0 +1,40 @@
+name: Raycast Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Meteor Source
+        uses: actions/checkout@v4
+        with:
+          path: meteor-src
+
+      - name: Checkout Raycast Extensions Fork
+        uses: actions/checkout@v4
+        with:
+          repository: mvrck-dev/extensions
+          token: ${{ secrets.SYNC_PAT }}
+          path: raycast-fork
+
+      - name: Sync Files
+        run: |
+          mkdir -p raycast-fork/extensions/meteor
+          rsync -av --delete --exclude=".git" --exclude="node_modules" --exclude="dist" meteor-src/ raycast-fork/extensions/meteor/
+
+      - name: Commit and Push
+        run: |
+          cd raycast-fork
+          git config user.name "mvrck-dev"
+          git config user.email "mvrck-dev@users.noreply.github.com"
+          git add -A extensions/meteor
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "sync: update Meteor from source repository"
+            git push origin main
+          else
+            echo "No changes to sync"
+          fi
